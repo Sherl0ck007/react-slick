@@ -217,7 +217,7 @@ export var InnerSlider = createReactClass({
         onMouseLeave={this.onInnerSliderLeave}
         onMouseOver={this.onInnerSliderOver}
       >
-        {prevArrow}
+
         <div
           ref={this.listRefHandler}
           className="slick-list"
@@ -235,8 +235,11 @@ export var InnerSlider = createReactClass({
             {this.props.children}
           </Track>
         </div>
-        {nextArrow}
-        {dots}
+        <div className="slick-nav">
+          {prevArrow}
+          {dots}
+          {nextArrow}
+        </div>
       </div>
     );
   }
